@@ -138,10 +138,29 @@ void Spil::eventyr()
         int monsterValg;
         cin >> monsterValg;
 
-        bool sejr =
-            kamp.kaemp(
-                karakter->getMonstre()[monsterValg - 1],
-                fjende);
+        bool sejr = kamp.kaemp(karakter->getMonstre()[monsterValg - 1], fjende);
+
+        while (!fjende.erBesejret() && karakter->harMonstreTilbage())
+        {
+            cout << "\nDit monster er besejret!\n";
+            cout << "\nVil du kæmpe videre med et andet monster? (y/n): ";
+
+            char valg;
+            cin >> valg;
+
+            if (valg != 'y' && valg != 'Y')
+            {
+                cout << "Du har opgivet kampen.\n";
+                return;
+            }
+
+            cout << "\nVælg et andet monster:\n";
+            karakter->visInventory();
+            cin >> monsterValg;
+
+            sejr = kamp.kaemp(karakter->getMonstre()[monsterValg - 1], fjende);
+        }
+
 
         if (fjende.erBesejret())
         {
@@ -177,11 +196,6 @@ void Spil::eventyr()
                     }
                 }
             }
-        }
-        else
-        {
-            cout << "Dit monster blev besejret.\n";
-
         }
     }
 
