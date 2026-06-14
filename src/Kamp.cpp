@@ -4,7 +4,7 @@
 bool Kamp::kaemp(Monster& spillerMonster,
                  Monster& fjendeMonster)
 {
-    bool spillerStarter = rand() % 2;
+    bool spillerStarter = rand() % 2; // Tilfældig beslutning om hvem der starter
 
     while (!spillerMonster.erBesejret()
            && !fjendeMonster.erBesejret())

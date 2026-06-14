@@ -67,6 +67,12 @@ void Spil::opretKarakter()
 
     karakter->tilfoejMonster(
         Monster("Hest", 100, 15));
+    
+    cout << "Dette er dine start monstre:\n";
+    for (const auto& monster : karakter->getMonstre())
+    {
+        cout << "- " << monster.getNavn() << " (HP: " << monster.getHp() << ", Styrke: " << monster.getStyrke() << ")" << endl;
+    }
 }
 
 void Spil::eventyr()
@@ -81,7 +87,7 @@ void Spil::eventyr()
         {
             cout << i + 1
                  << ". "
-                 << fjender[i].getNavn()
+                 << fjender[i].getNavn() << " (HP: " << fjender[i].getHp() << ", Styrke: " << fjender[i].getStyrke() << ")"
                  << endl;
         }
 
@@ -91,7 +97,7 @@ void Spil::eventyr()
         Monster fjende =
             fjender[fjendeValg - 1];
 
-        cout << "\nVælg monster:\n";
+        cout << "\nVælg monster at kæmpe med:\n";
 
         for (int i = 0;
              i < karakter->getMonstre().size();
@@ -99,7 +105,7 @@ void Spil::eventyr()
         {
             cout << i + 1
                  << ". "
-                 << karakter->getMonstre()[i].getNavn()
+                 << karakter->getMonstre()[i].getNavn() << " (HP: " << karakter->getMonstre()[i].getHp() << ", Styrke: " << karakter->getMonstre()[i].getStyrke() << ")"
                  << endl;
         }
 
