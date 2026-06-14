@@ -55,7 +55,7 @@ void Spil::opretKarakter()
 {
     string navn;
 
-    cout << "Karakter navn: ";
+    cout << "\nKarakter navn: ";
     cin >> navn;
 
     delete karakter;
@@ -66,7 +66,7 @@ void Spil::opretKarakter()
         Monster("Hest", 100, 15));
 
     karakter->tilfoejMonster(
-        Monster("Hest", 100, 15));
+        Monster("Gris", 150, 10));
     
     cout << "Dette er dine start monstre:\n";
     for (const auto& monster : karakter->getMonstre())
@@ -75,12 +75,29 @@ void Spil::opretKarakter()
     }
 }
 
+
 void Spil::eventyr()
 {
     Kamp kamp;
 
     while (karakter->harMonstreTilbage())
     {
+        cout << "\nHvad vil du gøre?\n";
+        cout << "1. Kæmp\n";
+        cout << "2. Gå tilbage til hovedmenu\n";
+        cout << "3. Afslut spil\n";
+
+        int valg;
+        cin >> valg;
+        if (valg == 2)
+            return;
+        if (valg == 3)
+        {
+            cout << "\nFarvel\n";
+            exit(0);
+        }
+        
+
         cout << "\nVælg fjende:\n";
 
         for (int i = 0; i < fjender.size(); i++)
@@ -94,8 +111,8 @@ void Spil::eventyr()
         int fjendeValg;
         cin >> fjendeValg;
 
-        Monster fjende =
-            fjender[fjendeValg - 1];
+        Monster fjende = fjender[fjendeValg - 1];
+        int originalHp = fjende.getHp();
 
         cout << "\nVælg monster at kæmpe med:\n";
 
@@ -120,6 +137,9 @@ void Spil::eventyr()
         if (sejr)
         {
             cout << "Du vandt!\n";
+            cout << fjende.getNavn() << " blev fanget!\n";
+
+            fjende = Monster(fjende.getNavn(), originalHp, fjende.getStyrke());
 
             if (!karakter->tilfoejMonster(fjende))
             {
@@ -129,6 +149,7 @@ void Spil::eventyr()
         else
         {
             cout << "Dit monster blev besejret.\n";
+
         }
     }
 
