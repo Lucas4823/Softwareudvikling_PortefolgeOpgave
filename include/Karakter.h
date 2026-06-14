@@ -23,4 +23,6 @@ public:
     vector<Monster>& getMonstre();
 
     bool harMonstreTilbage() const;
+
+    void visInventory() const;
 };

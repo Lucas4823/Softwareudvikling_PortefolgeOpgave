@@ -1,4 +1,5 @@
 #include "Karakter.h"
+#include <iostream>
 
 Karakter::Karakter(string navn)
 {
@@ -41,4 +42,36 @@ bool Karakter::harMonstreTilbage() const
     }
 
     return false;
+}
+
+void Karakter::visInventory() const
+{
+
+    cout << "\n=========== INVENTORY ===========\n";
+    cout << "Karakter: " << navn << "\n";
+    cout << "Monstre:\n";
+
+    if (monstre.empty())
+    {
+        cout << "Du har ingen monstre endnu.\n";
+    }
+    else
+    {
+        for (int i = 0; i < monstre.size(); i++)
+        {
+            cout << i + 1 << ". "
+                 << monstre[i].getNavn()
+                 << " | HP: " << monstre[i].getHp()
+                 << " | STY: " << monstre[i].getStyrke();
+
+            if (monstre[i].erBesejret())
+            {
+                cout << " (DEFEATED)";
+            }
+
+            cout << "\n";
+        }
+    }
+
+    cout << "=================================\n";
 }

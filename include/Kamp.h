@@ -4,6 +4,9 @@
 class Kamp
 {
 public:
-    bool kaemp(Monster& spillerMonster,
-               Monster& fjendeMonster);
+    bool kaemp(Monster& spiller, Monster& fjende);
+
+private:
+    void visKampStatus(const Monster& spiller,
+                       const Monster& fjende);
 };

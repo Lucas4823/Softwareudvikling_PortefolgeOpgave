@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void visKampStatus(const Monster& spiller, const Monster& fjende)
+void Kamp::visKampStatus(const Monster& spiller, const Monster& fjende)
 {
     cout << "\n==================== KAMP ====================\n";
 

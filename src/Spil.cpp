@@ -1,4 +1,5 @@
 #include "Spil.h"
+#include "Karakter.h"
 #include <iostream>
 
 using namespace std;
@@ -18,6 +19,15 @@ Spil::Spil()
 
     fjender.push_back(
         Monster("Ulv", 80, 12));
+    
+    fjender.push_back(
+        Monster("Giant", 200, 25));
+
+    fjender.push_back(
+        Monster("Vampyr", 130, 18));
+
+    fjender.push_back(
+        Monster("Goblin", 60, 10));
 }
 
 void Spil::start()
@@ -67,12 +77,10 @@ void Spil::opretKarakter()
 
     karakter->tilfoejMonster(
         Monster("Gris", 150, 10));
+
     
-    cout << "Dette er dine start monstre:\n";
-    for (const auto& monster : karakter->getMonstre())
-    {
-        cout << "- " << monster.getNavn() << " (HP: " << monster.getHp() << ", Styrke: " << monster.getStyrke() << ")" << endl;
-    }
+    cout << "Dette er dit inventory:\n";
+    karakter->visInventory();
 }
 
 
@@ -84,18 +92,27 @@ void Spil::eventyr()
     {
         cout << "\nHvad vil du gøre?\n";
         cout << "1. Kæmp\n";
-        cout << "2. Gå tilbage til hovedmenu\n";
-        cout << "3. Afslut spil\n";
+        cout << "2. Vis inventory\n";
+        cout << "3. Gå tilbage til hovedmenu\n";
+        cout << "4. Afslut spil\n";
 
         int valg;
         cin >> valg;
-        if (valg == 2)
+        switch (valg)
+    {
+        case 1:
+            break;
+
+        case 2:
+            karakter->visInventory();
+            continue; 
+
+        case 3:
             return;
-        if (valg == 3)
-        {
-            cout << "\nFarvel\n";
+
+        case 4:
             exit(0);
-        }
+    }
         
 
         cout << "\nVælg fjende:\n";
@@ -116,15 +133,7 @@ void Spil::eventyr()
 
         cout << "\nVælg monster at kæmpe med:\n";
 
-        for (int i = 0;
-             i < karakter->getMonstre().size();
-             i++)
-        {
-            cout << i + 1
-                 << ". "
-                 << karakter->getMonstre()[i].getNavn() << " (HP: " << karakter->getMonstre()[i].getHp() << ", Styrke: " << karakter->getMonstre()[i].getStyrke() << ")"
-                 << endl;
-        }
+        karakter->visInventory();
 
         int monsterValg;
         cin >> monsterValg;
@@ -134,16 +143,39 @@ void Spil::eventyr()
                 karakter->getMonstre()[monsterValg - 1],
                 fjende);
 
-        if (sejr)
+        if (fjende.erBesejret())
         {
-            cout << "Du vandt!\n";
-            cout << fjende.getNavn() << " blev fanget!\n";
+            cout << "\nDu har besejret " << fjende.getNavn() << "!\n";
+            cout << "Vil du fange det? (y/n): ";
 
-            fjende = Monster(fjende.getNavn(), originalHp, fjende.getStyrke());
+            char valg;
+            cin >> valg;
 
-            if (!karakter->tilfoejMonster(fjende))
+            if (valg == 'y' || valg == 'Y')
             {
-                cout << "Du har allerede 4 monstre.\n";
+                Monster fangetMonster(
+                    fjende.getNavn(),
+                    originalHp,
+                    fjende.getStyrke()
+                );
+
+                if (!karakter->tilfoejMonster(fangetMonster))
+                {
+                    cout << "\nDu har allerede 4 monstre!\n";
+                    cout << "Vil du udskifte et monster? (y/n): ";
+
+                    cin >> valg;
+
+                    if (valg == 'y' || valg == 'Y')
+                    {
+                        int index;
+                        cout << "Vælg hvilket monster (1-4): ";
+                        karakter->visInventory();
+                        cin >> index;
+
+                        karakter->udskiftMonster(index - 1, fangetMonster);
+                    }
+                }
             }
         }
         else
