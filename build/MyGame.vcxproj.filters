@@ -31,6 +31,9 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Paralyzed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Cursed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
