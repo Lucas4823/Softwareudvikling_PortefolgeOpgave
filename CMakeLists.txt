@@ -31,6 +31,7 @@ add_executable(MyGame
     src/Ting/Kolle.cpp
     src/Ting/Blaeser.cpp
     src/Ting/Forbandelse.cpp
+    src/Ting/Gift.cpp
 )
 
 target_include_directories(MyGame PRIVATE include)
