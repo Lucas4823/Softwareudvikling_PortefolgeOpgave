@@ -2,6 +2,8 @@
 #include "Karakter.h"
 #include "Kamp.h"
 #include "Monster.h"
+#include "Grotte.h"
+
 
 // Ting
 #include "Ting/Blaeser.h"
@@ -124,14 +126,16 @@ void Spil::opretKarakter()
 void Spil::eventyr()
 {
     Kamp kamp;
+    Grotte grotte;
 
     while (karakter->harMonstreTilbage())
     {
         cout << "\nHvad vil du gøre?\n";
-        cout << "1. Kæmp\n";
-        cout << "2. Vis inventory\n";
-        cout << "3. Gå tilbage til hovedmenu\n";
-        cout << "4. Afslut spil\n";
+        cout << "1. Kæmp mod fjende\n";
+        cout << "2. Gå i grotte\n";
+        cout << "3. Vis inventory\n";
+        cout << "4. Gå tilbage til hovedmenu\n";
+        cout << "5. Afslut spil\n";
 
         int valg;
         cin >> valg;
@@ -141,13 +145,26 @@ void Spil::eventyr()
             break;
 
         case 2:
+        {
+            bool klar = grotte.gennemfoerGrotte(karakter->getMonstre()[0]);
+
+            if (klar)
+            {
+                cout << "\nDu får en reward!\n";
+
+                karakter->getMonstre()[0].tilfoejTing(grotte.getReward());
+            }
+
+            break;
+        }
+        case 3:
             karakter->visInventory();
             continue; 
 
-        case 3:
+        case 4:
             return;
 
-        case 4:
+        case 5:
             exit(0);
     }
         
