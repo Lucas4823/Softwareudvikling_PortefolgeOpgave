@@ -1,4 +1,5 @@
 #include "Karakter.h"
+#include "Ting/Ting.h"
 #include <iostream>
 
 Karakter::Karakter(string navn)
@@ -62,8 +63,21 @@ void Karakter::visInventory() const
             cout << i + 1 << ". "
                  << monstre[i].getNavn()
                  << " | HP: " << monstre[i].getHp()
-                 << " | STY: " << monstre[i].getStyrke();
+                 << " | STY: " << monstre[i].getStyrke()
+                 << " | Ting: ";
 
+            if (monstre[i].getTing().empty())
+            {
+                cout << "Ingen";
+            }
+            else
+            {
+                for (Ting* ting : monstre[i].getTing())
+                {
+                    cout << "[" << ting->getNavn() << "] ";
+                }
+            }
+            
             if (monstre[i].erBesejret())
             {
                 cout << " (DEFEATED)";

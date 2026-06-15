@@ -32,6 +32,7 @@ public:
 
     void tilfoejTing(Ting* ting);
     vector<Ting*>& getTing();
+    const vector<Ting*>& getTing() const;
 
     bool harStatus() const;
     bool harModtagetSkade() const;

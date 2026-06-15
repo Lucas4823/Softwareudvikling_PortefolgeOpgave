@@ -88,6 +88,11 @@ vector<Ting*>& Monster::getTing()
     return ting;
 }
 
+const vector<Ting*>& Monster::getTing() const
+{
+    return ting;
+}
+
 bool Monster::harStatus() const
 {
     return !statusser.empty();
