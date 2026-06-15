@@ -1,4 +1,5 @@
 #include "Kamp.h"
+#include "Ting/Ting.h"
 #include <iostream>
 #include <cstdlib>
 
@@ -33,17 +34,81 @@ bool Kamp::kaemp(Monster& spillerMonster,
 
         if (spillerStarter)
         {
-            cout << spillerMonster.getNavn()
-                 << " angriber!\n";
+
+            if (!spillerMonster.behandlStatusser())
+            {
+                cout << "Du mister din tur pga. status!\n";
+            }
+
+            else
+            {
+            cout << "\nDin tur med " << spillerMonster.getNavn() << "!\n";
+
+            cout << "1. Angrib\n";
+            cout << "2. Brug ting\n";
+
+            int valg;
+            cin >> valg;
+
+            if (valg == 1)
+            {
+            cout << spillerMonster.getNavn() << " angriber!\n";
 
             fjendeMonster.tagSkade(spillerMonster.getStyrke());
+            }
+
+            else if (valg == 2)
+            {
+                vector<Ting*>& ting = spillerMonster.getTing();
+
+                if (ting.empty())
+                {
+                    cout << "Du har ingen ting!\n";
+                }
+                else
+                {
+                    cout << "\nVælg ting:\n";
+
+                    for (int i = 0; i < ting.size(); i++)
+                    {
+                        cout << i + 1 << ". "
+                            << ting[i]->getNavn()
+                            << endl;
+                    }
+
+                    int tingValg;
+                    cin >> tingValg;
+
+                    if (tingValg < 1 || tingValg > ting.size())
+                    {
+                        cout << "Ugyldigt valg!\n";
+                    }
+                    else
+                    {
+                        ting[tingValg - 1]->brug(spillerMonster, fjendeMonster);
+                    }
+                }
+            }
+            else
+            {
+                cout << "Ugyldigt valg, du mister din tur!\n";}
+            }
         }
+        
         else
         {
-            cout << fjendeMonster.getNavn()
+            if (!fjendeMonster.behandlStatusser())
+            {
+                cout << fjendeMonster.getNavn()
+                    << " mister sin tur!\n";
+            }
+            else
+            {
+                cout << fjendeMonster.getNavn()
                  << " angriber!\n";
 
-            spillerMonster.tagSkade(fjendeMonster.getStyrke());
+                spillerMonster.tagSkade(fjendeMonster.getStyrke());
+            }
         }
 
         spillerStarter = !spillerStarter;

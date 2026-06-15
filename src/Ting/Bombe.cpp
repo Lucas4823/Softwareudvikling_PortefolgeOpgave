@@ -9,5 +9,5 @@ string Bombe::getNavn() const
 void Bombe::brug(Monster&,
                  Monster& fjende)
 {
-    fjende.tagSkade(10);
+    fjende.tagSkade(20);
 }

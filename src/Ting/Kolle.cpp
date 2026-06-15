@@ -1,11 +1,13 @@
-#pragma once
-#include "Ting/Ting.h"
+#include "Ting/Kolle.h"
+#include "Monster.h"
 
-class Kolle : public Ting
+string Kolle::getNavn() const
 {
-public:
-    string getNavn() const override;
+    return "Kolle";
+}
 
-    void brug(Monster& bruger,
-              Monster& fjende) override;
-};
+void Kolle::brug(Monster&,
+                 Monster& fjende)
+{
+    fjende.tagSkade(30);
+}
