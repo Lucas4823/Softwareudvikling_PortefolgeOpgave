@@ -9,6 +9,11 @@ string Blaeser::getNavn() const
     return "Blæser";
 }
 
+string Blaeser::getBeskrivelse() const
+{
+    return "Blæser (80% chance for Frozen status (1-2 ture))";
+}
+
 void Blaeser::brug(Monster&,
                    Monster& fjende)
 {

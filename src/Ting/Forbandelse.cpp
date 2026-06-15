@@ -9,6 +9,11 @@ string Forbandelse::getNavn() const
     return "Forbandelse";
 }
 
+string Forbandelse::getBeskrivelse() const
+{
+    return "Forbandelse (20% chance for Cursed status (5 ture), 100% chance hvis fjenden allerede har en status)";
+}
+
 void Forbandelse::brug(Monster&,
                        Monster& fjende)
 {

@@ -98,7 +98,7 @@ bool Kamp::kaemp(Monster& spillerMonster,
                     for (int i = 0; i < ting.size(); i++)
                     {
                         cout << i + 1 << ". "
-                            << ting[i]->getNavn()
+                            << ting[i]->getBeskrivelse()
                             << endl;
                     }
 

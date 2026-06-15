@@ -19,7 +19,7 @@ bool Paralyzed::udfoer(Monster&)
 {
     varighed--;
 
-    if (rand() % 100 < 30)
+    if (rand() % 100 < 50)
     {
         cout << "Monsteret er paralyzed!\n";
         return false;

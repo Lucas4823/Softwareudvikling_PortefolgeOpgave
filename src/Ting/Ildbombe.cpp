@@ -9,6 +9,11 @@ string Ildbombe::getNavn() const
     return "Ildbombe";
 }
 
+string Ildbombe::getBeskrivelse() const
+{
+    return "Ildbombe (5 skade, 35% chance for Stunned status (1 tur))";
+}
+
 void Ildbombe::brug(Monster&,
                     Monster& fjende)
 {

@@ -12,6 +12,8 @@ public:
 
     virtual string getNavn() const = 0;
 
+    virtual string getBeskrivelse() const = 0;
+
     virtual void brug(Monster& bruger,
                       Monster& fjende) = 0;
 };

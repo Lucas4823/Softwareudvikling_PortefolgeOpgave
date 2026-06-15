@@ -1,9 +1,17 @@
 #include "Spil.h"
 #include "Karakter.h"
+#include "Kamp.h"
+#include "Monster.h"
+
+// Ting
+#include "Ting/Blaeser.h"
 #include "Ting/Bombe.h"
-#include "Ting/Ildbombe.h"
-#include "Ting/Gift.h"
 #include "Ting/Forbandelse.h"
+#include "Ting/Gift.h"
+#include "Ting/Ildbombe.h"
+#include "Ting/Kolle.h"
+#include "Ting/Tordenbombe.h"
+
 #include <iostream>
 
 using namespace std;
@@ -76,21 +84,37 @@ void Spil::opretKarakter()
 
     karakter = new Karakter(navn);
 
+    // Start monstre
     karakter->tilfoejMonster(
         Monster("Hest", 100, 15));
 
     karakter->tilfoejMonster(
         Monster("Gris", 150, 10));
 
-    karakter->getMonstre()[0].tilfoejTing(
+    karakter->tilfoejMonster(
+        Monster("Test", 10000, 10));
+
+    // Start ting for test
+    karakter->getMonstre()[2].tilfoejTing(
         new Bombe());
 
-    karakter->getMonstre()[0].tilfoejTing(
+    karakter->getMonstre()[2].tilfoejTing(
         new Ildbombe());
 
-    karakter->getMonstre()[1].tilfoejTing(
+    karakter->getMonstre()[2].tilfoejTing(
         new Gift());
 
+    karakter->getMonstre()[2].tilfoejTing(
+        new Forbandelse());
+
+    karakter->getMonstre()[2].tilfoejTing(
+        new Tordenbombe());
+
+    karakter->getMonstre()[2].tilfoejTing(
+        new Blaeser());
+
+    karakter->getMonstre()[2].tilfoejTing(
+        new Kolle());
     
     cout << "Dette er dit inventory:\n";
     karakter->visInventory();
