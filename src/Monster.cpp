@@ -1,5 +1,6 @@
 #include "Monster.h"
 #include "Status.h"
+#include "Ting.h"
 
 Monster::Monster(string navn, int hp, int styrke)
 {
@@ -7,6 +8,7 @@ Monster::Monster(string navn, int hp, int styrke)
     this->hp = hp;
     this->styrke = styrke;
     this->statusser = vector<Status*>();
+    this->ting = vector<Ting*>();
 }
 
 string Monster::getNavn() const
@@ -71,4 +73,16 @@ bool Monster::behandlStatusser()
     }
 
     return maaHandle;
+
+    
+}
+
+void Monster::tilfoejTing(Ting* ting)
+{
+    this->ting.push_back(ting);
+}
+
+vector<Ting*>& Monster::getTing()
+{
+    return ting;
 }

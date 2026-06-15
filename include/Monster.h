@@ -3,6 +3,7 @@
 #include <vector>
 
 class Status;
+class Ting;
 
 using namespace std;
 
@@ -13,6 +14,7 @@ private:
     int hp;
     int styrke;
     vector<Status*> statusser;
+    vector<Ting*> ting;
 
 public:
     Monster(string navn, int hp, int styrke);
@@ -26,4 +28,7 @@ public:
 
     void tilfoejStatus(Status* status);
     bool behandlStatusser();
+
+    void tilfoejTing(Ting* ting);
+    vector<Ting*>& getTing();
 };

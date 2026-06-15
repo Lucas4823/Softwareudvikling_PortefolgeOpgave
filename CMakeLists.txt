@@ -18,4 +18,5 @@ add_executable(main
     src/Monster.cpp
     src/Kamp.cpp
     src/Status.cpp
+    src/Ting.cpp
 )
