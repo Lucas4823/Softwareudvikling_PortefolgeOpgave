@@ -21,6 +21,7 @@ add_executable(MyGame
     src/Status/Poisoned.cpp
     src/Status/Stunned.cpp
     src/Status/Frozen.cpp
+    src/Status/Paralyzed.cpp
 
     src/Ting/Ting.cpp
     src/Ting/Bombe.cpp
