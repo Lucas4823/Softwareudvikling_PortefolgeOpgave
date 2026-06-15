@@ -52,6 +52,9 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Blaeser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Forbandelse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\SDU\2Semester\SoftwareUdvikling\CMakeLists.txt" />
