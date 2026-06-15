@@ -46,6 +46,9 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Tordenbombe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Kolle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\SDU\2Semester\SoftwareUdvikling\CMakeLists.txt" />

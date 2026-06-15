@@ -383,6 +383,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Bombe.cpp" />
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ildbombe.cpp" />
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Tordenbombe.cpp" />
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Kolle.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
