@@ -17,4 +17,5 @@ add_executable(main
     src/Karakter.cpp
     src/Monster.cpp
     src/Kamp.cpp
+    src/Status.cpp
 )

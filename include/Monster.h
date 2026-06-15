@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include <vector>
+
+class Status;
 
 using namespace std;
 
@@ -9,6 +12,7 @@ private:
     string navn;
     int hp;
     int styrke;
+    vector<Status*> statusser;
 
 public:
     Monster(string navn, int hp, int styrke);
@@ -19,4 +23,7 @@ public:
 
     void tagSkade(int skade);
     bool erBesejret() const;
+
+    void tilfoejStatus(Status* status);
+    bool behandlStatusser();
 };

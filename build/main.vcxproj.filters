@@ -16,6 +16,9 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Kamp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\SDU\2Semester\SoftwareUdvikling\CMakeLists.txt" />
