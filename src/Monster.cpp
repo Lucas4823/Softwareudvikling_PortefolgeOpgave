@@ -6,6 +6,7 @@ Monster::Monster(string navn, int hp, int styrke)
 {
     this->navn = navn;
     this->hp = hp;
+    this->maxHp = hp;
     this->styrke = styrke;
     this->statusser = vector<Status*>();
     this->ting = vector<Ting*>();
@@ -85,4 +86,14 @@ void Monster::tilfoejTing(Ting* ting)
 vector<Ting*>& Monster::getTing()
 {
     return ting;
+}
+
+bool Monster::harStatus() const
+{
+    return !statusser.empty();
+}
+
+bool Monster::harModtagetSkade() const
+{
+    return hp < maxHp;
 }

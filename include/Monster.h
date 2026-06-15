@@ -13,6 +13,7 @@ private:
     string navn;
     int hp;
     int styrke;
+    int maxHp;
     vector<Status*> statusser;
     vector<Ting*> ting;
 
@@ -31,4 +32,7 @@ public:
 
     void tilfoejTing(Ting* ting);
     vector<Ting*>& getTing();
+
+    bool harStatus() const;
+    bool harModtagetSkade() const;
 };
