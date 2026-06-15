@@ -19,6 +19,7 @@ add_executable(MyGame
     src/Status/Status.cpp
     src/Ting/Ting.cpp
     src/Status/Poisoned.cpp
+    src/Status/Stunned.cpp
 )
 
 target_include_directories(MyGame PRIVATE include)
