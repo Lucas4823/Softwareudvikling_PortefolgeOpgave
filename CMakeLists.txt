@@ -27,6 +27,7 @@ add_executable(MyGame
     src/Ting/Ting.cpp
     src/Ting/Bombe.cpp
     src/Ting/Ildbombe.cpp
+    src/Ting/Tordenbombe.cpp
 )
 
 target_include_directories(MyGame PRIVATE include)
