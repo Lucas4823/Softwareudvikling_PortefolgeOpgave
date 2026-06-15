@@ -15,17 +15,25 @@
 
 using namespace std;
 
-Grotte::Grotte()
+Grotte::Grotte(const Karakter& spiller)
 {
-    fjender.push_back(Monster("Ulv", 1, 10));
-    //fjender.push_back(Monster("Trold", 120, 15));
-    //fjender.push_back(Monster("Goblin", 60, 8));
+    float hp = spiller.gennemsnitHp();
+    float str = spiller.gennemsnitStyrke();
 
-    reward = new Bombe(); // eller random senere
+    fjender.clear();
+
+    fjender.push_back(Monster("Goblin", hp * 0.4, str * 0.4));
+
+    fjender.push_back(Monster("Ork", hp * 0.6, str * 0.6));
+
+    fjender.push_back(Monster("Boss", hp * 1, str * 1));
+    reward = nullptr;
 }
+
 
 bool Grotte::gennemfoerGrotte(Karakter& spiller)
 {
+
     Kamp kamp;
 
     cout << "\n=== DU GÅR IND I GROTTE ===\n";
@@ -70,11 +78,44 @@ bool Grotte::gennemfoerGrotte(Karakter& spiller)
         cout << "\nFjende besejret!\n";
     }
 
-    cout << "\nDU KLAREDE HELE GROTTE!\n";
+    cout << "\nDU KLAREDE HELE GROTTEN!\n";
+    reward = genererReward();
+
     return true;
 }
 
 Ting* Grotte::getReward() const
 {
     return reward;
+}
+
+Ting* Grotte::genererReward() const
+{
+    int r = rand() % 7;
+
+    switch (r)
+    {
+        case 0:
+            return new Bombe();
+
+        case 1:
+            return new Ildbombe();
+
+        case 2:
+            return new Gift();
+
+        case 3:
+            return new Forbandelse();
+
+        case 4:
+            return new Tordenbombe();
+
+        case 5:
+            return new Kolle();
+
+        case 6:
+            return new Blaeser();
+    }
+
+    return new Bombe(); // fallback
 }

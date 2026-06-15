@@ -13,8 +13,11 @@ private:
     Ting* reward;
 
 public:
-    Grotte();
+    Grotte(const Karakter& spiller);
     bool gennemfoerGrotte(Karakter& spiller);
 
     Ting* getReward() const;
+
+    Ting* genererReward() const;
+
 };

@@ -5,9 +5,9 @@
 Monster::Monster(string navn, int hp, int styrke)
 {
     this->navn = navn;
-    this->hp = hp;
-    this->maxHp = hp;
-    this->styrke = styrke;
+    this->hp = (int)hp;
+    this->maxHp = (int)hp;
+    this->styrke = (int)styrke;
     this->statusser = vector<Status*>();
     this->ting = vector<Ting*>();
 }

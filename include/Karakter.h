@@ -27,4 +27,7 @@ public:
     void visInventory() const;
 
     Monster& vaelgMonster(int index);
+
+    float gennemsnitHp() const;
+    float gennemsnitStyrke() const;
 };

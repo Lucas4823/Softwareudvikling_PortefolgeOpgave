@@ -101,10 +101,11 @@ void Spil::opretKarakter()
 void Spil::eventyr()
 {
     Kamp kamp;
-    Grotte grotte;
+
 
     while (karakter->harMonstreTilbage())
     {
+        Grotte grotte(*karakter);
         cout << "\nHvad vil du gøre?\n";
         cout << "1. Kæmp mod fjende\n";
         cout << "2. Gå i grotte\n";
@@ -125,13 +126,19 @@ void Spil::eventyr()
 
             if (klar)
             {
-                cout << "\nDu får en " << grotte.getReward()->getNavn() << "!\n";
-                cout << "Hvilket monster vil du give den til? (1-4): ";
-                karakter->visInventory();
+                Ting* reward = grotte.getReward();
 
-                int monsterValg;
-                cin >> monsterValg;
-                karakter->getMonstre()[monsterValg - 1].tilfoejTing(grotte.getReward());
+                if (reward != nullptr)
+                {
+                    cout << "\nDu får en " << reward->getNavn() << "!\n";
+                    cout << "Hvilket monster vil du give den til? (1-4): ";
+                    karakter->visInventory();
+
+                    int monsterValg;
+                    cin >> monsterValg;
+                    karakter->getMonstre()[monsterValg - 1].tilfoejTing(reward);
+                }
+                
             }
 
             continue;

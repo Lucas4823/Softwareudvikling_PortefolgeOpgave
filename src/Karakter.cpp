@@ -94,3 +94,27 @@ Monster& Karakter::vaelgMonster(int index)
 {
     return monstre.at(index);
 }
+
+float Karakter::gennemsnitHp() const
+{
+    if (monstre.empty()) return 0;
+
+    int sum = 0;
+
+    for (const Monster& m : monstre)
+        sum += m.getHp();
+
+    return (float)sum / monstre.size();
+}
+
+float Karakter::gennemsnitStyrke() const
+{
+    if (monstre.empty()) return 0;
+
+    int sum = 0;
+
+    for (const Monster& m : monstre)
+        sum += m.getStyrke();
+
+    return (float)sum / monstre.size();
+}
