@@ -1,5 +1,5 @@
 #pragma once
-#include "Status.h"
+#include "Status/Status.h"
 
 class Stunned : public Status
 {

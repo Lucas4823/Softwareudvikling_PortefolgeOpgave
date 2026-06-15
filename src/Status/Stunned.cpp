@@ -1,4 +1,4 @@
-#include "Stunned.h"
+#include "Status/Stunned.h"
 #include <iostream>
 
 using namespace std;

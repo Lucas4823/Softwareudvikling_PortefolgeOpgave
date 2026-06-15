@@ -16,10 +16,13 @@ add_executable(MyGame
     src/Karakter.cpp
     src/Monster.cpp
     src/Kamp.cpp
+
     src/Status/Status.cpp
-    src/Ting/Ting.cpp
     src/Status/Poisoned.cpp
     src/Status/Stunned.cpp
+
+    src/Ting/Ting.cpp
+    src/Ting/Bombe.cpp
 )
 
 target_include_directories(MyGame PRIVATE include)
