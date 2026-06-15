@@ -89,3 +89,8 @@ void Karakter::visInventory() const
 
     cout << "=================================\n";
 }
+
+Monster& Karakter::vaelgMonster(int index)
+{
+    return monstre.at(index);
+}

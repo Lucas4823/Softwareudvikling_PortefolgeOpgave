@@ -93,31 +93,6 @@ void Spil::opretKarakter()
     karakter->tilfoejMonster(
         Monster("Gris", 150, 10));
 
-    karakter->tilfoejMonster(
-        Monster("Test", 10000, 10));
-
-    // Start ting for test
-    karakter->getMonstre()[2].tilfoejTing(
-        new Bombe());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Ildbombe());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Gift());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Forbandelse());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Tordenbombe());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Blaeser());
-
-    karakter->getMonstre()[2].tilfoejTing(
-        new Kolle());
-    
     cout << "Dette er dit inventory:\n";
     karakter->visInventory();
 }
@@ -146,16 +121,20 @@ void Spil::eventyr()
 
         case 2:
         {
-            bool klar = grotte.gennemfoerGrotte(karakter->getMonstre()[0]);
+            bool klar = grotte.gennemfoerGrotte(*karakter);
 
             if (klar)
             {
-                cout << "\nDu får en reward!\n";
+                cout << "\nDu får en " << grotte.getReward()->getNavn() << "!\n";
+                cout << "Hvilket monster vil du give den til? (1-4): ";
+                karakter->visInventory();
 
-                karakter->getMonstre()[0].tilfoejTing(grotte.getReward());
+                int monsterValg;
+                cin >> monsterValg;
+                karakter->getMonstre()[monsterValg - 1].tilfoejTing(grotte.getReward());
             }
 
-            break;
+            continue;
         }
         case 3:
             karakter->visInventory();

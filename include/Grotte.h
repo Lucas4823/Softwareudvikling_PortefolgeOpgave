@@ -2,6 +2,7 @@
 #include <vector>
 #include "Monster.h"
 #include "Ting/Ting.h"
+#include "Karakter.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ private:
 
 public:
     Grotte();
-    bool gennemfoerGrotte(Monster& spillerMonster);
+    bool gennemfoerGrotte(Karakter& spiller);
 
     Ting* getReward() const;
 };

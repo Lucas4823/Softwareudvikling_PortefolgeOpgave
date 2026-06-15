@@ -25,4 +25,6 @@ public:
     bool harMonstreTilbage() const;
 
     void visInventory() const;
+
+    Monster& vaelgMonster(int index);
 };
