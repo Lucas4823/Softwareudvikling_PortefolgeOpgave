@@ -1,4 +1,4 @@
-#include "Bombe.h"
+#include "Ting/Bombe.h"
 #include "Monster.h"
 
 string Bombe::getNavn() const

@@ -4,5 +4,8 @@ E:\SDU\2Semester\SoftwareUdvikling\src\Karakter.cpp;E:\SDU\2Semester\SoftwareUdv
 E:\SDU\2Semester\SoftwareUdvikling\src\Monster.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Monster.obj
 E:\SDU\2Semester\SoftwareUdvikling\src\Kamp.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Kamp.obj
 E:\SDU\2Semester\SoftwareUdvikling\src\Status\Status.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Status.obj
-E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Ting.obj
 E:\SDU\2Semester\SoftwareUdvikling\src\Status\Poisoned.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Poisoned.obj
+E:\SDU\2Semester\SoftwareUdvikling\src\Status\Stunned.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Stunned.obj
+E:\SDU\2Semester\SoftwareUdvikling\src\Status\Frozen.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Frozen.obj
+E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Ting.obj
+E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Bombe.cpp;E:\SDU\2Semester\SoftwareUdvikling\build\MyGame.dir\Debug\Bombe.obj

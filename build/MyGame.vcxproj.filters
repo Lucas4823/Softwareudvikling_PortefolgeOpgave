@@ -19,10 +19,19 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Status.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Poisoned.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Stunned.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Frozen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Poisoned.cpp">
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Bombe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
