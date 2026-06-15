@@ -1,6 +1,6 @@
 #include "Monster.h"
-#include "Status.h"
-#include "Ting.h"
+#include "Status/Status.h"
+#include "Ting/Ting.h"
 
 Monster::Monster(string navn, int hp, int styrke)
 {

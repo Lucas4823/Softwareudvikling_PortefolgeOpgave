@@ -16,10 +16,13 @@
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Kamp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status.cpp">
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Status.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting.cpp">
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Poisoned.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

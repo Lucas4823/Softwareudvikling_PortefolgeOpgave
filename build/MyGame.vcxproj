@@ -22,11 +22,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{36CBF1B3-90A0-3E1B-B698-A7785F7245FB}</ProjectGuid>
+    <ProjectGuid>{3A4C050A-D241-37E2-B27C-61BFFDF8DF72}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
-    <ProjectName>main</ProjectName>
+    <ProjectName>MyGame</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -60,26 +60,26 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\SDU\2Semester\SoftwareUdvikling\build\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MyGame.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MyGame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\SDU\2Semester\SoftwareUdvikling\build\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MyGame.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MyGame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\SDU\2Semester\SoftwareUdvikling\build\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">main</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">MyGame.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">MyGame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\SDU\2Semester\SoftwareUdvikling\build\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">main</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">MyGame.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">MyGame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
@@ -130,9 +130,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/Debug/main.lib</ImportLibrary>
+      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/Debug/MyGame.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/MyGame.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -187,9 +187,9 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/Release/main.lib</ImportLibrary>
+      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/Release/MyGame.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/MyGame.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -244,9 +244,9 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/MinSizeRel/main.lib</ImportLibrary>
+      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/MinSizeRel/MyGame.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/MinSizeRel/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/MinSizeRel/MyGame.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -300,9 +300,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/RelWithDebInfo/main.lib</ImportLibrary>
+      <ImportLibrary>E:/SDU/2Semester/SoftwareUdvikling/build/RelWithDebInfo/MyGame.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/RelWithDebInfo/main.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>E:/SDU/2Semester/SoftwareUdvikling/build/RelWithDebInfo/MyGame.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -373,8 +373,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Karakter.cpp" />
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Monster.cpp" />
     <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Kamp.cpp" />
-    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status.cpp" />
-    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting.cpp" />
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Status.cpp" />
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Ting\Ting.cpp" />
+    <ClCompile Include="E:\SDU\2Semester\SoftwareUdvikling\src\Status\Poisoned.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

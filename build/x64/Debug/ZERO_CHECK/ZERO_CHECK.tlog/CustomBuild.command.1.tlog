@@ -1,6 +1,6 @@
 ^E:\SDU\2SEMESTER\SOFTWAREUDVIKLING\BUILD\CMAKEFILES\5893EA92065B17B11E531EB10AAD64AA\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SE:/SDU/2Semester/SoftwareUdvikling -BE:/SDU/2Semester/SoftwareUdvikling/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/SDU/2Semester/SoftwareUdvikling/build/main.slnx
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/SDU/2Semester/SoftwareUdvikling -BE:/SDU/2Semester/SoftwareUdvikling/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/SDU/2Semester/SoftwareUdvikling/build/MyGame.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
