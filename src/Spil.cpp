@@ -25,7 +25,7 @@ Spil::Spil()
         Monster("Ulv", 80, 12));
     
     fjender.push_back(
-        Monster("Giant", 200, 25));
+        Monster("Giant", 200, 10));
 
     fjender.push_back(
         Monster("Vampyr", 130, 18));

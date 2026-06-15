@@ -36,4 +36,7 @@ public:
 
     bool harStatus() const;
     bool harModtagetSkade() const;
+
+    vector<Status*>& getStatusser();
+    const vector<Status*>& getStatusser() const;
 };

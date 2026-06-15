@@ -1,5 +1,6 @@
 #include "Kamp.h"
 #include "Ting/Ting.h"
+#include "Status/Status.h"
 #include <iostream>
 #include <cstdlib>
 
@@ -12,16 +13,41 @@ void Kamp::visKampStatus(const Monster& spiller, const Monster& fjende)
     cout << "Dit monster: " << spiller.getNavn()
          << " | HP: " << spiller.getHp()
          << " | Styrke: " << spiller.getStyrke()
-         << endl;
+         << " | Status: ";
+
+    if (spiller.getStatusser().empty())
+    {
+        cout << "Ingen";
+    }
+    else
+    {
+        for (Status* s : spiller.getStatusser())
+        {
+            cout << s->getNavn() << " ";
+        }
+    }
+
+    cout << "\n";
 
     cout << "Fjende:     " << fjende.getNavn()
          << " | HP: " << fjende.getHp()
          << " | Styrke: " << fjende.getStyrke()
-         << endl;
+         << " | Status: ";
 
-    cout << "=============================================\n";
+    if (fjende.getStatusser().empty())
+    {
+        cout << "Ingen";
+    }
+    else
+    {
+        for (Status* s : fjende.getStatusser())
+        {
+            cout << s->getNavn() << " ";
+        }
+    }
+
+    cout << "\n=============================================\n";
 }
-
 bool Kamp::kaemp(Monster& spillerMonster,
                  Monster& fjendeMonster)
 {

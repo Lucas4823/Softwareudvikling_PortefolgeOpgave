@@ -102,3 +102,13 @@ bool Monster::harModtagetSkade() const
 {
     return hp < maxHp;
 }
+
+vector<Status*>& Monster::getStatusser()
+{
+    return statusser;
+}
+
+const vector<Status*>& Monster::getStatusser() const
+{
+    return statusser;
+}
